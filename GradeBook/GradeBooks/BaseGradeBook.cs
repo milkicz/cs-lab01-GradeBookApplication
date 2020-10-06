@@ -113,7 +113,7 @@ namespace GradeBook.GradeBooks
 
         public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
-            if (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)
+            if ((studentType == StudentType.Honors || studentType == StudentType.DualEnrolled) && IsWeighted == true)
             {
                 switch (letterGrade)
                 {
